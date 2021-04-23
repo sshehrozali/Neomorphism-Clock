@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/96876926e3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CSS/main.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+  <title>Neumorphism Clock</title>
+</head>
+
+<body>
+  <div class="cont">
+    <div class="text-center">
+      <a class="animated-btn text-white" id="start"><i class="fa fa-play"></i></a>
+    </div>
+    <h1 id="title" class="display-1"></h1>
+    <div class="container" id="DateTimeCont">
+      <div class="row sub-cont">
+        <div class="col display-4" id="hrs"></div>
+        <div class="col display-4" id="mins"></div>
+        <div class="col display-4" id="secs"></div>
+      </div>
+    </div>
+  </div>
+  <div class="form-check form-switch" id="toggle-dark-mode">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault" id="toggle-switch-text">Dark Mode is <b
+        id="toggle-status">OFF</b></label>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

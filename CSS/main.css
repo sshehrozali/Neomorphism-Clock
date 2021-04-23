@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    padding: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e0e0e0;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.sub-cont div{
+    display: flex;
+    justify-content: center;
+
+    margin: 20px;
+    padding: 20px;
+
+    border: none;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                 -20px -20px 60px #ffffff;
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #1c1c21;
+}
+
+
+/* Button */
+.animated-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    display: inline-block;
+    text-align: center;
+    background: #ff3f3f;
+    position: relative;
+    cursor: pointer;
+}
+
+.animated-btn::before, .animated-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background: rgba(255, 63, 63, 0.8);
+    animation: ripple-1 2s infinite ease-in-out;
+    z-index: -1;
+}
+
+.animated-btn::after {
+    background: rgba(255, 63, 63, 0.6);
+    animation: ripple-2 2s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+@keyframes ripple-1 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+
+/* Toggling theme switch */
+#toggle-dark-mode{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
+/* Text Tracking in Animation */
+    @-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    @keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Text Blur Out Animation */
+    @-webkit-keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+    @keyframes text-blur-out {
+    0% {
+      -webkit-filter: blur(0.01);
+              filter: blur(0.01);
+    }
+    100% {
+      -webkit-filter: blur(12px) opacity(0%);
+              filter: blur(12px) opacity(0%);
+    }
+  }
+
+/* Text Focus in Animation */
+    @-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+    }
+    @keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+    }
+
+
+
+#title{
+    text-align: center;
+    color: #1c1c21;
+}
+
+#DateTimeCont{
+    display: none;
+}
+
+/* Media Queries */
+/* Phones and Small Screens */
+@media screen and (max-width: 768px) {
+    .sub-cont{
+        width: 100vw;
+    }   
+}
+
+/* Medium Screens and Tablets */
+@media screen and (min-width: 768px) {
+    .sub-cont{
+        width: 60vw;
+    }   
+}
+
+ /* Laptops and Large Screens */
+@media screen and (min-width: 1200px) {
+    .sub-cont{
+        width: 40vw;
+    }   
+}
+
+/* Extra Large Screens */
+@media screen and (min-width: 1528px) {
+    .sub-cont{
+        width: 30vw;
+    }   
+}
